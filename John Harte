@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        .message {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            width: 80%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar-inner {
+            height: 30px;
+            width: 0;
+            background-color: #4caf50;
+            border-radius: 5px;
+            animation: progress 5s linear infinite;
+        }
+        @keyframes progress {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">Downloading...</div>
+    <div class="progress-bar">
+        <div class="progress-bar-inner"></div>
+    </div>
+</body>
+</html>
