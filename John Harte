@@ -12,36 +12,36 @@
             height: 100vh;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
-            flex-direction: column;
         }
-        .message {
-            font-size: 2em;
-            color: #333;
-            margin-bottom: 20px;
+        .container {
+            text-align: center;
         }
         .progress-bar {
-            width: 80%;
+            width: 100%;
             background-color: #ddd;
-            border-radius: 5px;
+            border-radius: 25px;
             overflow: hidden;
+            margin-top: 20px;
         }
-        .progress-bar-inner {
-            height: 30px;
+        .progress {
             width: 0;
+            height: 30px;
             background-color: #4caf50;
-            border-radius: 5px;
-            animation: progress 5s linear infinite;
+            border-radius: 25px;
+            animation: progress-animation 5s linear infinite;
         }
-        @keyframes progress {
+        @keyframes progress-animation {
             0% { width: 0; }
             100% { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <div class="message">Downloading...</div>
-    <div class="progress-bar">
-        <div class="progress-bar-inner"></div>
+    <div class="container">
+        <h1>Downloading...</h1>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
     </div>
 </body>
 </html>
